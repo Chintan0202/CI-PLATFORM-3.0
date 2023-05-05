@@ -1,0 +1,534 @@
+﻿@model CIPlatformMain.Entities.ViewModel.UserData
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+
+    @*Foredit Skills*@
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/EditProfile.css">
+
+
+</head>
+<body>
+    <style>
+        input {
+            border: 1px solid black !important;
+            background-image: none !important;
+            box-shadow: none !important;
+        }
+
+        select {
+            border: 1px solid black !important;
+            background-image: none !important;
+            box-shadow: none !important;
+        }
+
+        textarea {
+            border: 1px solid black !important;
+            background-image: none !important;
+            box-shadow: none !important;
+        }
+
+        .profile-pic {
+            color: transparent;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+            .profile-pic input {
+                display: none;
+            }
+
+            .profile-pic img {
+                position: absolute;
+                object-fit: cover;
+                width: 165px;
+                height: 165px;
+                box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+                border-radius: 100px;
+                z-index: 0;
+            }
+
+            .profile-pic .-label {
+                cursor: pointer;
+                height: 165px;
+                width: 165px;
+            }
+
+            .profile-pic:hover .-label {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 10000;
+                color: #fafafa;
+                transition: background-color 0.2s ease-in-out;
+                border-radius: 100px;
+                margin-bottom: 0;
+            }
+
+            .profile-pic span {
+                display: inline-flex;
+                padding: 0.2em;
+                height: 2em;
+            }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .start-btn {
+            margin-right: auto;
+        }
+
+        .end-btn {
+            display: flex;
+        }
+
+        /*  For Skill Edit Add
+                        */
+        .dual-list .list-group {
+            margin-top: 8px;
+        }
+
+        .list-left li, .list-right li {
+            cursor: pointer;
+        }
+
+        .list-arrows {
+            padding-top: 100px;
+        }
+
+            .list-arrows button {
+                margin-bottom: 20px;
+            }
+    </style>
+
+    <partial name="_navigation" />
+    <div class="container">
+        <form method="post" asp-action="EditProfile" enctype="multipart/form-data" class="was-validated">
+            <div class="row mt-4">
+
+                <div class="col-lg-2 mt-2">
+
+                    <div class="profile-pic">
+                        <label class="-label" for="file">
+                            <span class="glyphicon glyphicon-camera"></span>
+                            <span>Change Image</span>
+                        </label>
+                        <input id="file" type="file" onchange="loadFile(event)" name="Avatar" />
+                        <img src="@Model.User.Avatar" id="output" width="200" />
+                    </div>
+                    <p class="text-center">@Model.User.FirstName @Model.User.LastName</p>
+                    <button type="button" class="btn btn-outline-dark d-flex m-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Change Password
+                    </button>
+                </div>
+                <div class="col-lg-9 ms-3 mt-2">
+                    <h3>Basic Information</h3>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label class="profile_details_text">Name:</label>
+                                <input type="text" asp-for="User.FirstName" class="form-control" value="@Model.User.FirstName" required>
+                                <div class="invalid-feedback">
+                                    FirstName Is Required Here!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label class="profile_details_text">Surname: </label>
+                                <input type="text" asp-for="User.LastName" class="form-control" value="@Model.User.LastName" required>
+                                <div class="invalid-feedback">
+                                    LastName Is Required Here!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label class="profile_details_text">EmployeeId:</label>
+                                <input type="text" asp-for="User.EmployeeId" class="form-control" value="@Model.User.EmployeeId">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label class="profile_details_text">Manager: </label>
+                                <input type="text" asp-for="User.Manager" class="form-control" value="@Model.User.Manager">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label class="profile_details_text">Title:</label>
+                                <input type="text" asp-for="User.Title" class="form-control" value="@Model.User.Title" required>
+                                <div class="invalid-feedback">
+                                    Title Is Required Here!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label class="profile_details_text">Department: </label>
+                                <input type="text" asp-for="User.Department" class="form-control" value="@Model.User.Department">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="profile_details_text">My Profile:</label>
+                                <textarea asp-for="User.ProfileText" class="form-control" rows="4" value="">@Model.User.ProfileText</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="profile_details_text">Why Volunteer ?</label>
+                                <textarea asp-for="User.WhyIVolunteer" class="form-control" rows="4" value="">@Model.User.WhyIVolunteer</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Address Information</h3>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Country</label>
+                                <select class="form-select" name="countryid" id="country" aria-label="Default select example" required>
+
+                                    @if (Model.User.CountryId != null)
+                                    {
+                                        <option value="@Model.User.CountryId" selected>@Model.Country.Where(c=>c.CountryId==Model.User.CountryId).Select(c=>c.Name).FirstOrDefault()</option>
+                                    }
+
+
+
+                                    @foreach (var item in Model.Country)
+                                    {
+                                        <option value="@item.CountryId">@item.Name</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                            <div class="form-group">
+                                <label>City</label>
+                                <select class="form-select city-drop" name="cityid" aria-label="Default select example">
+
+                                    @if (Model.User.CityId != null)
+                                    {
+                                        <option value="@Model.User.CityId">@Model.City.FirstOrDefault(c=>c.CityId==Model.User.CityId).Name</option>
+                                    }
+
+
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h3>Add Skill</h3>
+                    <hr />
+                    <div class="container" style="border:1px solid black">
+                        <ul class="mt-3 p-0" style="list-style-type: none;">
+                            @if (Model.userSkill != null)
+                            {
+                                @foreach (var item in Model.userSkill)
+                                {
+                                    <li>@item.Skill.SkillName</li>
+                                }
+                            }
+
+                        </ul>
+                    </div>
+
+
+
+                    <div class="button-row mt-3">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary start-btn rounded-pill" data-toggle="modal" data-target="#SkillsModal">
+                            Add Skills
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="SkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+
+                                            <div class="dual-list list-left col-md-5">
+                                                <div class="well text-right">
+                                                    <div class="row">
+                                                        <div class="col-md-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon glyphicon glyphicon-search"></span>
+                                                                <input type="text" name="SearchDualList" class="form-control" placeholder="search" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="btn-group">
+                                                                <a class="btn btn-default selector" title="select all"><i class="glyphicon glyphicon-unchecked"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="list-group">
+                                                        @foreach (var item in Model.Skills)
+                                                        {
+                                                            <li class="list-group-item" value="@item.SkillId">@item.SkillName</li>
+
+                                                        }
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-arrows col-md-1 text-center">
+                                                <a class="btn btn-default btn-sm move-left">
+                                                    <
+                                                </a>
+
+                                                <a class="btn btn-default btn-sm move-right">
+                                                    >
+                                                </a>
+                                            </div>
+
+                                            <div class="dual-list list-right col-md-5">
+                                                <div class="well">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <div class="btn-group">
+                                                                <a class="btn btn-default selector" title="select all"><i class="glyphicon glyphicon-unchecked"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <div class="input-group">
+                                                                <input type="text" name="SearchDualList" class="form-control" placeholder="search" />
+                                                                <span class="input-group-addon glyphicon glyphicon-search"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="list-group selected-list">
+                                                        @foreach (var item in Model.userSkill)
+                                                        {
+                                                            <li class="list-group-item" value="@item.Skill.SkillId">@item.Skill.SkillName</li>
+                                                        }
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="Addskills">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="end-btn">
+                            <button type="submit" class="btn btn-outline-warning  rounded-pill">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Change Password</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+
+
+                            <div class="form-group">
+                                <label class="profile_details_text">Enter Old Password</label>
+                                <input type="password" id="OldPassword" name="oldpassword" class="form-control" required>
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="exampleInputEmail1" class="form-label ">New Passowrd</label>
+                                <input type="password" placeholder="********" class="form-control" name="NewPassword" id="NewPassword" aria-describedby="emailHelp" required />
+
+                            </div>
+                            <div class="mb-1">
+                                <label for="exampleInputEmail1" class="form-label ">Conform Passowrd</label>
+                                <input type="password" placeholder="*********" class="form-control" name="Conformpassword" id="Conformpassword" aria-describedby="emailHelp" required />
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <input type="button" class="btn btn-primary" id="changepass" value="Change Password" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="
+  bottom: 10px;">
+        <hr />
+        <div class="container-fluid ">
+
+            <a class="nav-link fs-5" asp-controller="Home" asp-action="PrivacyPolicy" style="text-decoration:none">Privacy Policy</a>
+
+        </div>
+    </div>
+
+    <script>
+        var loadFile = function (event) {
+            var image = document.getElementById("output");
+            image.src = URL.createObjectURL(event.target.files[0]);
+            console.log(image)
+        };
+
+        $("#changepass").on('click', function () {
+            var uoldpassword = $("#OldPassword").val();
+            var unewpassword = $('#NewPassword').val();
+            var uconformpassword = $("#Conformpassword").val();
+
+            if (unewpassword != uconformpassword) {
+
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Oops...',
+                    text: 'Password And Conform Password must be same'
+                })
+            }
+            else if(uoldpassword == ""){
+            Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'Enter Something in OldPassword'
+            })
+            }
+            else if (unewpassword == "") {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Oops...',
+                    text: 'Enter Something in newpassword'
+                })
+            }
+            else if (uconformpassword == "") {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Oops...',
+                    text: 'Enter Something in conformpassword'
+                })
+            }
+
+            else {
+                $.ajax({
+                    type: 'POST',
+                    url: '/User/chnagepassword',
+                    data: {
+                        oldpassword: uoldpassword,
+                        ConformPassword: uconformpassword,
+                        NewPassword: unewpassword
+                    },
+                    success:
+                        function (res) {
+                            console.log(res)
+                            if(res=="success"){
+                                Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'Password Is Succcessfully Changed',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                            $("#OldPassword").val("");
+                            $('#NewPassword').val("");
+                            $("#Conformpassword").val("");
+                            $("#staticBackdrop").modal('hide');
+                            }
+
+                            else{
+                                
+                                Swal.fire({
+                                    icon: 'warning',
+                                    title: 'Oops...',
+                                    text: 'Wrong OldPassword'
+                                })
+                               
+                            }
+
+                        },
+                    failure:
+                        function () {
+                            console.log('error');
+                        }
+                });
+            }
+        })
+        $('#country').on('change', function () {
+
+            $.ajax({
+                type: 'GET',
+
+                url: '/User/GetCities',
+                data: {
+
+                    Country_id: $('#country').val()
+                },
+                success:
+                    function (res) {
+                        console.log(res);
+                        $(".city-drop").empty();
+                        for (var i = 0; i < res.length; i++) {
+                            console.log(res[i]);
+                            $('.city-drop').append(`<option value="${res[i].cityId}">${res[i].name}</option>`);
+                        }
+
+                    },
+                failure:
+                    function () {
+
+                    }
+            });
+        });
+    </script>
+
+
+    <script src="~/js/EditProfile.js"></script>
+
+
+</body>
+</html>

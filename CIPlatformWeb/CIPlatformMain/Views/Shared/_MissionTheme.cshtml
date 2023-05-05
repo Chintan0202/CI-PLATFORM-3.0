@@ -1,0 +1,127 @@
+﻿@model CIPlatformMain.Entities.ViewModel.AdminData
+
+
+
+<style>    
+    #ThemeTable_filter {
+        display: none;
+    }
+
+    .button-row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .start-btn {
+        margin-right: auto;
+    }
+
+    .end-btn {
+        display: flex;
+    }
+
+
+    tr td {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .current {
+        background-color: #F88634 !important;
+    }
+</style>
+
+
+
+<div class="container-fluid">
+
+    <h2>Mission Theme</h2>
+    <hr />
+   
+
+           
+
+    <div class="button-row mb-3">
+        <div class=" start-btn">
+
+            <input class="form-control me-2 " id="ThemeTableSearch" type="search" placeholder="Search" aria-label="Search">
+        </div>
+
+        <div class="end-btn">
+            <button class="btn btn-outline-warning rounded-pill px-3 py-0 me-2" onclick="DraftTheme()"><i class="bi bi-plus-lg "></i> <span class="btn-label">Add</span></button>
+
+        </div>
+    </div>
+            
+           
+<div class="table-responsiv-lg">
+    <table id="ThemeTable" class="table " data-page-length='10'>
+        <thead style="background-color:#F8F9FC">
+
+            <tr>
+                <th class="py-3" scope="col">MissionTheme Title</th>
+                <th class="py-3" scope="col">Status</th>
+                <th class="py-3" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Themes)
+            {
+
+                <tr>
+                    <td>@item.Title</td>
+                    @if (item.Status == 1)
+                    {
+                        <td class="text-success">Active</td>
+                    }
+                    else
+                    {
+                        <td class="text-danger">Inactive</td>
+                    }
+
+
+
+                        <td><span data-bs-toggle="modal" onclick="DraftTheme(@item.MissionThemeId)" data-bs-target="#ThemeEdit" style="color:#F88634"><i class="bi bi-pencil-square"></i></span>&nbsp;&nbsp;&nbsp; &nbsp;<span onclick="DeleteTheme(@item.MissionThemeId)"><i class="bi bi-trash"></i></span></td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</div>
+
+</div>
+<div class="modal fade" id="ThemeEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Theme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">ThemeName</span>
+                    <input type="text" class="form-control" id="ThemeName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    <input hidden id="ThemeId" />
+                </div>
+                <div class="mb-3">
+                    <label for="Status" class="form-label">Status</label>
+                    <select id="Status" class="form-control">
+                        <option value="1">
+                            Active
+                        </option>
+                        <option value="0">
+                            InActive
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning" onclick="AddEditTheme()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

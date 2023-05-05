@@ -1,0 +1,231 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model CIPlatformMain.Entities.ViewModel.Missiondata;
+
+<html>
+<head>
+    <link rel="stylesheet" href="/css/Navigation.css" />
+</head>
+<body>
+
+    <div id="mySidenav" class="sidenav" style="z-index:1;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <ul class="list-unstyled ps-0">
+
+            <li class="mb-1 ms-3">
+                <button class="drop-btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                    Country
+                </button>
+                <div class="collapse" id="home-collapse">
+                    <ul class=" btn-toggle-nav list-unstyled fw-normal pb-1 small ms-4">
+                        @foreach (var C in Model.Country)
+                        {
+                            <li>
+                                <a class="dropdown-item country-drop">
+                                    <input class="form-check-input" type="checkbox" value="@C.Name" id="@C.Name" onchange="filter()">
+                                    <label class="form-check-label" for="@C.Name">
+                                        @C.Name
+
+                                    </label>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1 ms-3">
+                <button class="drop-btn  btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#City" aria-expanded="true">
+                    City
+                </button>
+                <div class="collapse" id="City">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-4">
+                        @foreach (var c in Model.City)
+                        {
+                            <li>
+                                <a class="dropdown-item city-drop" href="#">
+                                    <input class="form-check-input" type="checkbox" value="@c.Name" id="@c.Name" onchange="filter()">
+                                    <label class="form-check-label" for="@c.Name">
+                                        @c.Name
+                                    </label>
+                                </a>
+                               
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1 ms-3">
+                <button class="drop-btn   btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Theme" aria-expanded="true">
+                    Themes
+                </button>
+                <div class="collapse" id="Theme">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-4">
+                        @foreach (var t in Model.Theme)
+                        {
+                            <li>
+                                <a class="dropdown-item theme-drop">
+                                    <input class="form-check-input" type="checkbox" value="@t.Title" id="@t.Title" onchange="filter()">
+                                    <label class="form-check-label" for="@t.Title">
+                                        @t.Title
+                                    </label>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1 ms-3">
+                <button class="drop-btn  btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Skill" aria-expanded="true">
+                    Skill
+                </button>
+                <div class="collapse " id="Skill">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-4">
+                        @foreach (var s in Model.Skills)
+                        {
+                            <li>
+                                <a class="dropdown-item skill-drop">
+                                    <input class="form-check-input" type="checkbox" value="@s.SkillName" id="@s.SkillName" onchange="filter()">
+                                    <label class="form-check-label" for="@s.SkillName">
+                                        @s.SkillName
+                                    </label>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1 ms-3">
+                <button class="drop-btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort-By
+                </button>
+                <ul class="dropdown-menu ">
+                    <li value=1 class="dropdown-item sortvalue">NewestFirst</li>
+                    <li value=2 class="dropdown-item sortvalue">OldestFirst</li>
+                    <li value=3 class="dropdown-item sortvalue">ByStartDate</li>
+                    <li value=4 class="dropdown-item sortvalue">ByEndDate</li>
+                    <li value=5 class="dropdown-item sortvalue">Favrouites</li>
+                    <li value=6 class="dropdown-item sortvalue">SeatsLeft</li>
+
+                </ul>
+            </li>
+        
+        </ul>
+
+    </div>
+
+
+
+
+    <nav class="navbar navbar-light   filter-class p-0 border-bottom">
+        <form class="container">
+            <div class="input-group col-lg-6 search-box  border-0 px-3 py-1 border-0">
+                <img width="25px" height="25px" src="/images/search.png" class="mt-2" />
+                <input type="text" class="form-control ps-3 fs-5 border-0 " style=" box-shadow:none!important;" id="search-text" placeholder="Search Mission....">
+            </div>
+            <div class="btn-group filter-boxes">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Country
+                </button>
+                <ul class="dropdown-menu">
+
+                    @foreach (var i in Model.Country)
+                    {
+                        <li>
+                            <a class="dropdown-item country-drop">
+                                <input class="form-check-input" type="checkbox" value="@i.Name" id="@i.Name" onchange="filter()">
+                                <label class="form-check-label" for="@i.Name">
+                                    @i.Name
+                                </label>
+
+                            </a>
+                        </li>
+
+
+                    }
+
+                </ul>
+            </div>
+            <div class="btn-group filter-boxes">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    City
+                </button>
+                <ul class="dropdown-menu cities">
+
+                    @foreach (var c in Model.City)
+                    {
+                        <li>
+                            <a class="dropdown-item city-drop">
+                                <input class="form-check-input" type="checkbox" value="@c.Name" id="@c.Name" onchange="filter()">
+                                <label class="form-check-label" for="@c.Name">
+                                    @c.Name
+                                </label>
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+            <div class="btn-group filter-boxes">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Theme
+                </button>
+                <ul class="dropdown-menu">
+                    @foreach (var t in Model.Theme)
+                    {
+                        <li>
+                            <a class="dropdown-item theme-drop" href="#">
+                                <input class="form-check-input" type="checkbox" value=" @t.Title" id="@t.Title" onchange="filter()">
+                                <label class="form-check-label" for="@t.Title">
+                                    @t.Title
+                                </label>
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+            <div class="btn-group filter-boxes">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Skill
+                </button>
+                <ul class="dropdown-menu">
+                    @foreach (var s in Model.Skills)
+                    {
+                        <li>
+                            <a class="dropdown-item skill-drop">
+                                <input class="form-check-input" type="checkbox" value="@s.SkillName" id="@s.SkillName" onchange="filter()">
+                                <label class="form-check-label" for="@s.SkillName">
+                                    @s.SkillName
+                                </label>
+                            </a>
+                        </li>
+                    }
+                </ul>
+
+            </div>
+            <span style="font-size:30px;cursor:pointer" id="sidebar-btn" onclick="openNav()">
+                <img src="/images/filter.png" />
+            </span>
+        </form>
+
+    </nav>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        var text = $('#search-text').val();
+        console.log(text);
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+﻿@model CIPlatformMain.Entities.ViewModel.AdminData
+
+
+
+<style>
+    #SkillTable_filter {
+        display: none;
+    }
+    
+    
+
+    tr td {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .current {
+        background-color: #F88634 !important;
+    }
+
+</style>
+
+
+
+<div id="MissionApplication" class="container-fluid">
+
+    <h2>Mission Skills</h2>
+    <hr />
+    <div class=" row m-3">
+        <div class="start-btn col-10 ">
+
+           <input class="form-control  col-4" id="SkillTableSearch" type="search" placeholder="Search" aria-label="Search">
+        </div>
+
+        <div class=" col-2">
+            <div class="btn btn-outline-warning rounded-pill " data-bs-toggle="modal" onclick="FillModal()"  data-bs-target="#SkillEdit"><i class="bi bi-plus-lg "></i>Add</div>
+
+        </div>
+    </div>
+
+    
+
+    <div class="table-responsiv-lg">
+        <table id="SkillTable" class="table " data-page-length='8'>
+            <thead style="background-color:#F8F9FC">
+
+                <tr>
+                    <th class="py-3" scope="col">Skill Name</th>
+                    <th class="py-3" scope="col">Status</th>
+                    <th class="py-3" scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                @foreach (var item in Model.Skills)
+                {
+                   
+                    <tr>
+                       
+                        <td>@item.SkillName</td>
+                        @if (item.Status == 1)
+                        {
+                            <td class="text-success">Active</td>
+                        }
+                        else
+                        {
+                            <td class="text-danger">Inactive</td>
+                        }
+
+
+
+                         <td><span data-bs-toggle="modal" onclick="FillModal(@item.SkillId)"  data-bs-target="#SkillEdit" style="color:#F88634"><i class="bi bi-pencil-square"></i></span>&nbsp;&nbsp;&nbsp; &nbsp;<span onclick="DeleteSkill(@item.SkillId)"><i class="bi bi-trash"></i></span></td>
+                        <!-- Modal -->
+
+                    </tr>
+
+                }
+                
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<div class="modal fade" id="SkillEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Skill</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  onclick="EmptyModal()"></button>
+      </div>
+      <div class="modal-body">
+       <div class="input-group input-group-lg mb-3">
+  <span class="input-group-text" >SkillName</span>
+  <input type="text" class="form-control" id="SkillName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" >
+  <input hidden id="SkillId"/>
+                  
+</div>
+                <div class="mb-3">
+                    <label for="Status" class="form-label">Status</label>
+                    <select id="SkillStatus" class="form-control" >
+                        <option value="1">
+                            Active
+                        </option>
+                        <option value="0">
+                            InActive
+                        </option>
+                    </select>
+                </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="EmptyModal()">Close</button>
+        <button type="button" class="btn btn-primary"  onclick="AddEditSkill()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    function EmptyModal(){
+        $('#SkillName').val("");
+                $('#SkillId').val("");
+    }
+</script>
+
+

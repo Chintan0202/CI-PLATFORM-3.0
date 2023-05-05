@@ -1,0 +1,89 @@
+﻿@model CIPlatformMain.Entities.ViewModel.AdminData
+
+
+
+<style>
+    #StoryTable_filter {
+        display: none;
+    }
+
+    .button-row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .start-btn {
+        margin-right: auto;
+    }
+
+    .end-btn {
+        display: flex;
+    }
+
+    tr td {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .current {
+        background-color: #F88634 !important;
+    }
+</style>
+
+
+
+<div id="Storylist" class="container-fluid">
+
+    <h2>Story</h2>
+    <hr />
+
+
+    <input class="form-control m-3 col-4" id="SearchStory" type="search" placeholder="Search" aria-label="Search">
+
+    <div class="table-responsiv-lg">
+        <table id="StoryTable" class="table " data-page-length='8'>
+            <thead style="background-color:#F8F9FC">
+
+                <tr>
+                    <th class="py-3" scope="col">Story Title</th>
+                    
+                    <th class="py-3" scope="col">Full Name</th>
+                    <th class="py-3" scope="col">Mission Title</th>
+                   
+
+                    <th class="py-3" scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Stories)
+                {
+
+                    <tr>
+                        <td>@item.Title</td>
+                   
+                        <td>
+                            @item.User.FirstName @item.User.LastName
+                        </td>
+                        <td>@item.Mission.Title</td>
+
+
+
+
+                        <td>
+                            <span> <button class="btn btn-outline-warning rounded-pill px-3 py-0 me-2" onclick="GetStoryDetails(@item.StoryId)"><span class="btn-label">View</span></button></span>
+                            <span onclick="DeclineStory(@item.StoryId)" style="color:red"><i class="bi bi-x-circle"></i></span>&nbsp; &nbsp;
+                            <span onclick="ApproveStory(@item.StoryId)" style="color:forestgreen"><i class="bi bi-check-circle"></i></span>&nbsp; &nbsp;
+                            <span onclick="DeleteStory(@item.StoryId)" style="color:red"><i class="bi bi-trash"></i></span></td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="~/js/MissionApplicationList.js">
+
+</script>

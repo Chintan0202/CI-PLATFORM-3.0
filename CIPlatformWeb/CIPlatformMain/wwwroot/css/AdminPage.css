@@ -1,0 +1,72 @@
+﻿
+.user-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0px !important;
+}  
+@media screen and (min-width: 768px) {
+    .navbar .container-fluid,
+    .navbar-expand-lg .navbar-collapse,
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        min-width: 22%;
+        min-height: 100vh;
+        align-items: flex-start;
+    }
+
+    .navbar-brand {
+        
+    }
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #F88634;
+    background-color: #f8f9fa;
+}
+.nav-link, .nav-link {
+    color: #FFFFFF;
+    align-items: flex-start;
+}
+    .nav-link:hover {
+        background-color: #FFFFFF !important;
+        color: #F88634!important;
+    }
+.nav button{
+    margin-left:1rem;
+}
+.active-tab {
+    background-color: #FFFFFF !important;
+    color: #F88634 !important;
+}
+.tox-statusbar, .tox-menubar, .tox-notifications-container {
+    display: none !important;
+}
+input {
+    border: 1px solid black !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+select {
+    border: 1px solid black !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+textarea {
+    border: 1px solid black !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}

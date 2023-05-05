@@ -1,0 +1,90 @@
+﻿@model CIPlatformMain.Entities.ViewModel.AdminData
+
+
+<style>    
+    #CMSTable_filter {
+        display: none;
+    }
+
+    .button-row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .start-btn {
+        margin-right: auto;
+    }
+
+    .end-btn {
+        display: flex;
+    }
+
+    tr td {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .current {
+        background-color: #F88634 !important;
+    }
+</style>
+
+
+
+<div id="CMSData" class="container-fluid">
+
+    <h2 class="mt-1">CMS Page</h2>
+                <hr />
+<div class="button-row mb-3">
+    <div class=" start-btn">
+
+        <input class="form-control me-2" id="CMSSearch" type="search" placeholder="Search" aria-label="Search">
+    </div>
+
+    <div class="end-btn">
+        <button class="btn btn-outline-warning rounded-pill px-3 py-0 me-2" onclick="AddCMS()"><i class="bi bi-plus-lg "></i> <span class="btn-label">Add</span></button>
+
+    </div>
+</div>
+<div class="table-responsiv-lg">
+    <table id="CMSTable" class="table " data-page-length='8'>
+        <thead style="background-color:#F8F9FC">
+
+            <tr>
+                <th class="py-3" scope="col">Title</th>
+                <th class="py-3" scope="col">Status</th>
+                <th class="py-3" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.cmsPages)
+            {
+
+                <tr>
+                    <td>@item.Title</td>
+                    
+                    @if (item.Status == 1)
+                    {
+                        <td class="text-success">Active</td>
+                    }
+                    else
+                    {
+                        <td class="text-danger">Inactive</td>
+                    }
+
+                        <td><span onclick="EditCMS(@item.CmsPageId)" style="color:#F88634"><i class="bi bi-pencil-square"></i></span>&nbsp; &nbsp;<span onclick="DeleteCMS(@item.CmsPageId)"><i class="bi bi-trash"></i></span></td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</div>
+
+</div>
+ 
+ <script>
+    $('#UserList').removeClass('active-tab');
+    $('#v-pills-CMS-tab').addClass('active-tab');
+</script>
+

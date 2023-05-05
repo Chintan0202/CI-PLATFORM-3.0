@@ -1,0 +1,85 @@
+﻿@model CIPlatformMain.Entities.ViewModel.AdminData
+
+
+
+<style>    
+    #MissionApplicationTable_filter {
+        display: none;
+    }
+
+    .button-row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .start-btn {
+        margin-right: auto;
+    }
+
+    .end-btn {
+        display: flex;
+    }
+
+    tr td {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .current {
+        background-color: #F88634 !important;
+    }
+</style>
+
+
+
+<div id="MissionApplication" class="container-fluid">
+
+    <h2>Mission Applications</h2>
+    <hr />
+
+
+        <input class="form-control m-3 col-4" id="SearchMissionApplication" type="search" placeholder="Search" aria-label="Search">
+
+<div class="table-responsiv-lg" id="UserTable">
+    <table id="MissionApplicationTable" class="table " data-page-length='10'>
+        <thead style="background-color:#F8F9FC">
+
+            <tr>
+                <th class="py-3" scope="col">Mission Title</th>
+                <th class="py-3" scope="col">Mission Id</th>
+                <th class="py-3" scope="col">User Id</th>
+                <th class="py-3" scope="col">User Name</th>
+                <th class="py-3" scope="col">Applied Date</th>
+                
+                <th class="py-3" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.MissionApplications)
+            {
+
+                <tr>
+                    <td>@item.Mission.Title</td>
+                    <td>@item.MissionId</td>
+                    <td>@item.UserId</td>
+                        <td>@item.User.FirstName @item.User.LastName
+                        </td>
+                    
+                 
+                    <td>@Convert.ToDateTime(@item.AppliedAt).ToString("dd/MM/yyyy")</td>
+                   
+
+                    <td><span  onclick="Decline(@item.MissionId,@item.UserId)" style="color:red"><i class="bi bi-x-circle"></i></span>&nbsp; &nbsp;<span onclick="Approve(@item.MissionId,@item.UserId)" style="color:forestgreen"><i class="bi bi-check-circle"></i></span></td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</div>
+
+</div>
+ 
+<script src="~/js/MissionApplicationList.js">
+   
+</script>

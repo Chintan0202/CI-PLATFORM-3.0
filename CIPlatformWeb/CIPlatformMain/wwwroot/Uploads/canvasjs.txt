@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript src="canvasjs.min.js">
+</script>
+<script type="text/javascript>
+windows.onload=function(){
+var chart=new CanvasJS.Chart("chartcontainer",{
+title:{
+text:"basic concept coloumn chart using canvasjs library"
+},
+data:[{
+type:coloumn;
+dataPoints:[{x:10,y:75},{x=20,y=35},{x=30,y=75},{x=40,y=63},{x=50,y=76},{x=60,y=47}]
+]
+}
+);
+chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartcontainer" style="width:100%; height:100%;"></div>
+</body>
+</html>

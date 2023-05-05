@@ -1,0 +1,91 @@
+
+
+To fill multiple documents in an input tag using `asp-for` in ASP.NET MVC 6, you can follow these steps:
+
+1. Create a model object with a property that represents the collection of files you want to upload. For example, let's say you have a model with a `Documents` property:
+
+```
+public class MyModel
+{
+    public List<IFormFile> Documents { get; set; }
+}
+```
+
+2. In your razor view, use the `@model` directive to specify the model you want to use. For example:
+
+```
+@model MyModel
+```
+
+3. Create a form that includes an input tag with the `type` attribute set to `file` and the `multiple` attribute set to `multiple`. Use the `asp-for` attribute to bind the input tag to the `Documents` property of your model. For example:
+
+```
+<form method="post" enctype="multipart/form-data">
+    <input type="file" asp-for="Documents" multiple />
+    <button type="submit">Upload</button>
+</form>
+```
+
+4. In your controller action, you can access the uploaded files through the `Documents` property of your model. For example:
+
+```
+[HttpPost]
+public IActionResult Upload(MyModel model)
+{
+    // Access uploaded files through the Documents property
+    List<IFormFile> files = model.Documents;
+
+    // Perform upload logic
+
+    return View();
+}
+```
+
+This will create an input field that allows the user to select and upload multiple documents, and the uploaded files will be automatically bound to the `Documents` property in your model.
+
+To upload multiple documents using `asp-for` in ASP.NET MVC 6, you can follow these steps:
+
+1. In your model, create a property of type `List<IFormFile>` to hold the uploaded files:
+
+```
+public class MyModel
+{
+    public List<IFormFile> Files { get; set; }
+}
+```
+
+2. In your razor view, use the `asp-for` attribute to bind the input tag to the `Files` property of your model. Set the `multiple` attribute to allow the user to select multiple files:
+
+```
+<input asp-for="Files" type="file" multiple />
+```
+
+3. In your controller, create an action method to handle the file upload. You can use the `IFormFile` interface to access the uploaded files:
+
+```
+[HttpPost]
+public IActionResult UploadFiles(MyModel model)
+{
+    if (model.Files != null && model.Files.Count > 0)
+    {
+        foreach (var file in model.Files)
+        {
+            // Save the file to the server or do something else with it
+        }
+    }
+    
+    return RedirectToAction("Index");
+}
+```
+
+This action method will receive the uploaded files as part of the `MyModel` object. You can access the files in the `Files` property of the model, and save them to the server or perform some other operation with them.
+
+Note: Make sure to add the `enctype="multipart/form-data"` attribute to your form tag to allow file uploads:
+
+```
+<form method="post" asp-action="UploadFiles" enctype="multipart/form-data">
+    ...
+</form>
+``` 
+
+This attribute is required for file uploads to work properly in ASP.NET MVC.

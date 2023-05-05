@@ -1,0 +1,37 @@
+#f-login-btn {
+    width: 60%;
+    height: 48px;
+    margin-left: 20%;
+    background: #F8863400 0% 0% no-repeat padding-box;
+    border: 2px solid #F88634;
+    border-radius: 24px;
+    opacity: 1;
+}
+#f-login-btn:hover{
+    background-color:orange;
+}
+#f-pr {
+    position: relative;
+    top: 40px;
+}
+#f-main-cont {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+#f-title{
+    text-align: left;
+        letter-spacing: 0px;
+        color: #414141;
+        opacity: 1;
+}
+#f-disc{
+    text-align: center;
+        letter-spacing: 0px;
+        color: #414141;
+        opacity: 1;
+}
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,528 @@
+﻿@model CIPlatformMain.Entities.ViewModel.AddMission
+
+
+<style>
+    .input-div {
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 2px dotted black;
+        background-color: white;
+        position: relative;
+    }
+
+    .file {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    output {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 15px;
+        position: relative;
+        border-radius: 5px;
+    }
+
+        output .image {
+            height: 150px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+            output .image img {
+                height: 100%;
+                width: 100%;
+            }
+
+            output .image span {
+                position: absolute;
+                top: -4px;
+                right: 4px;
+                cursor: pointer;
+                font-size: 22px;
+                color: white;
+            }
+
+                output .image span:hover {
+                    opacity: 0.8;
+                }
+
+        output .span--hidden {
+            visibility: hidden;
+        }
+</style>
+<h2 class="mt-3">Mission</h2>
+<hr />
+<button class="btn btn-outline-warning" onclick="GetMissionList()">Back To List</button>
+<form method="post" class="m-4 needs-validation" novalidate asp-action="AddEditMission" asp-controller="Admin" enctype="multipart/form-data">
+    <input hidden asp-for="Mission.MissionId" />
+    <div class="mb-3">
+        <label for="Title" class="form-label">Title</label>
+        <input type="text" asp-for="Mission.Title" class="form-control" id="Title" required>
+        <div class="invalid-feedback">
+            Title Is Required Field Here
+        </div>
+
+    </div>
+    <div class="mb-3">
+        <label for="ShortDescription" class="form-label">ShortDescription</label>
+        <textarea id="ShortDescription" asp-for="Mission.ShortDescription" rows="5" class="form-control" maxlength="400" placeholder="Enter Only 400 char "></textarea>
+
+
+    </div>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <textarea id="editor" asp-for="Mission.Description" class="form-control" required></textarea>
+        <div class="invalid-feedback">
+            Descirption Is Required Field Here
+        </div>
+
+    </div>
+    <div class="row mb-3">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+            <label for="Country" class="form-label">Country</label>
+            <select asp-for="Mission.CountryId" class="form-select " id="country" onchange="GetCities()" required>
+                <option value="">Select Country</option>
+                @foreach (var item in Model.Countries)
+                {
+                    <option value="@item.CountryId">
+                        @item.Name
+                    </option>
+                }
+            </select>
+            <div class="invalid-feedback">
+                Country Is requires
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+            <label for="City" class="form-label">City</label>
+            <select asp-for="Mission.CityId" class="form-select"  id="citydrop" >
+             
+               
+            </select>
+            <div class="invalid-feedback">
+                City Is required
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="Orgnizationname" class="form-label">Organisation Name</label>
+        <input type="text" asp-for="Mission.OrganizationName" class="form-control" id="Orgnizationname">
+    </div>
+
+    <div class="mb-3">
+        <label for="OrgnizationDetails" class="form-label">Organisation Details</label>
+        <input type="text" asp-for="Mission.OrganizationDetail" class="form-control" id="OrgnizationDetails">
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+            <label for="StartDate" class="form-label">StartDate</label>
+            <input type="date" asp-for="Mission.StartDate" class="form-control" id="StartDate" onchange="DateValidation()" />
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+            <label for="EndDate" class="form-label">End Date</label>
+            <input type="date" asp-for="Mission.EndDate" class="form-control" id="EndDate" />
+
+        </div>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="Type" class="form-label">Mission Type</label>
+        <select asp-for="Mission.MissionType" id="typeselect" class="form-control" onchange="MissionType()" required>
+
+
+            <option value="Time">
+                Time
+            </option>
+            <option value="Goal">
+                Goal
+            </option>
+        </select>
+        <div class="invalid-feedback">
+            Mission Type is Required Field Here
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+            <label for="TotalSeats" class="form-label">Total Seats</label>
+            <input type="text" asp-for="Mission.TotalSeats" class="form-control" id="TotalSeats" disabled />
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+            <label for="Deadline" class="form-label">Deadline</label>
+            <input type="date" class="form-control" asp-for="Mission.Deadline" id="Deadline" disabled />
+
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+            <label for="GoalObjective" class="form-label">Goal Objective</label>
+            <input type="text" asp-for="GoalMission.GoalObjectiveText" class="form-control" id="GoalObjective" disabled />
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+            <label for="GoalValue" class="form-label">Goal Value</label>
+            <input type="number" asp-for="GoalMission.GoalValue" class="form-control" id="GoalValue" required disabled />
+            <div class="invalid-feedback">
+                Goalvalue is Required Field Here
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+
+        <label for="Theme" class="form-label">Theme</label>
+        <select asp-for="Mission.ThemeId" class="form-select" required>
+            <option value="">Open this select menu</option>
+            @foreach (var item in Model.Theme.Where(t => t.Status == 1 && t.DeletedAt==null))
+            {
+                <option value="@item.MissionThemeId">
+                    @item.Title
+                </option>
+            }
+        </select>
+        <div class="invalid-feedback">
+            Theme Is requires
+        </div>
+    </div>
+    <div class="mb-3">
+
+
+
+
+
+        <label for="Skill" class="form-label">Skill</label>
+
+        <select name="Skilllist" size="5" class="form-control" multiple>
+            @foreach (var item in Model.Skill.Where(s => s.Status == 1 && s.DeletedAt == null))
+            {
+                <option value="@item.SkillId">
+                    @item.SkillName
+                </option>
+            }
+        </select>
+
+
+        @if (Model.Mission != null && Model.MissionSkills != null)
+        {
+            <h5 class="m-3">Selected Skill</h5>
+            <div style="border:1px solid black">
+                <ul class="m-2 p-0" style="list-style-type: none;">
+                    @foreach (var item in Model.MissionSkills)
+                    {
+                        <li>@item.Skill.SkillName</li>
+                    }
+                </ul>
+            </div>
+        }
+
+    </div>
+
+
+    <div class="mb-3">
+        <label for="MissionDocument" class="form-label">Mission Document</label>
+        <input type="file" name="MissionDocument" class="form-control" id="MissionDocument" multiple accept=".txt,.pdf">
+    </div>
+
+
+    <div class="mb-3">
+
+        <label for="DefualtMissionPhoto" class="form-label">Default Image</label>
+        @if (Model.Mission != null)
+        {
+            <input type="file" name="DefualtMissionPhotos" placeholder="@Model.Mission.MissionImg.Substring(6,10)" class="form-control mb-2" id="DefualtMissionPhoto" onchange="loadFile(event)">
+            <img src="@Model.Mission.MissionImg" id="outputdefault" style="max-width:150px;max-height:150px;min-width:150px;min-height:150px;" />
+
+        }
+        else
+        {
+            <input type="file" name="DefualtMissionPhotos" class="form-control mb-2" id="DefualtMissionPhoto" onchange="loadFile(event)" accept="image/jpeg, image/png, image/jpg" required>
+            <img src="" id="outputdefault" style="max-width:200px;max-height:180px;" />
+            <div class="invalid-feedback">
+                Default Image Is required!
+            </div>
+        }
+
+    </div>
+    <div class="mb-3 mt-1">
+        <label class="form-label">Mission Images</label>
+        <input hidden name="preloadedImages" id="preloadedImages" />
+        <div class="input-div mt-3">
+            <p>Drag & drop photos here or <strong>Browse</strong></p>
+            <input type="file" id="MissionImages" class="file" name="MissionPhotos" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
+        </div>
+
+        @if (Model.Mission != null)
+        {
+            @if (Model.MissionMediums.Count() > 0)
+            {
+
+                @foreach (var item in Model.MissionMediums.Where(m => m.MediaType == "IMG"))
+                {
+                    <input hidden class="fillImage" value="@item.MediaPath" />
+                }
+
+
+            }
+        }
+        <output id="oldupload" class="m-2"></output>
+        <output id="newupload" class="m-2"></output>
+
+
+
+    </div>
+
+
+    <div class="mb-3">
+        <label for="MissionAvability" class="form-label">Mission Avability</label>
+        <select asp-for="Mission.Availability" id="MissionAvability" class="form-control">
+
+
+            <option value="daily">
+                Daily
+            </option>
+            <option value="weekly">
+                Weakly
+            </option>
+
+            <option value="week-end">
+                Weak-ends
+            </option>
+            <option value="monthly">
+                Monthly
+            </option>
+        </select>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="MissionVideo" class="form-label">Mission VideoURL</label>
+
+        @if (Model.MissionMediums != null && Model.Mission != null)
+        {
+            <input type="text" name="MissionVideoURL" value="@string.Join(',',Model.MissionMediums.Where(m=>m.MediaType=="URL"&&m.MissionId==Model.Mission.MissionId).Select(m=>m.MediaPath).ToArray())" class="form-control" id="MissionVideo">
+        }
+        else
+        {
+            <input type="text" name="MissionVideoURL" class="form-control" id="MissionVideo">
+        }
+    </div>
+
+
+
+
+
+    <div class="d-flex justify-content-between">
+        <button class="btn btn-dark" onclick="GetMissionList()">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+<script>
+
+    tinymce.remove();
+    tinymce.init({
+        selector: '#editor',
+        plugins: 'autolink lists link image charmap print preview',
+        toolbar: ' bold italic underline | alignleft aligncenter alignright | bullist numlist | undo redo ',
+        height: 250,
+        menubar: false,
+        max_chars: "1000",
+    });
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+    MissionType();
+    function MissionType() {
+        if ($('#typeselect').val() == "Goal") {
+            document.getElementById('TotalSeats').disabled = true;
+            document.getElementById('Deadline').disabled = true;
+            document.getElementById('GoalObjective').disabled = false;
+            document.getElementById('GoalValue').disabled = false;
+        }
+        else {
+
+            document.getElementById('GoalObjective').disabled = true;
+            document.getElementById('GoalValue').disabled = true;
+            document.getElementById('TotalSeats').disabled = false;
+            document.getElementById('Deadline').disabled = false;
+
+
+        }
+
+    }
+
+
+
+
+    var loadFile = function (event) {
+        var image = document.getElementById("outputdefault");
+        image.src = URL.createObjectURL(event.target.files[0]);
+        console.log(image);
+    };
+
+
+
+    var inputDiv = document.querySelector(".input-div")
+    var input = document.querySelector("#MissionImages")
+    var output = document.querySelector("#newupload")
+    var output1 = document.querySelector("#oldupload")
+    var imagesArray = []
+    var ajaximagesArray = []
+
+
+
+    input.addEventListener("change", () => {
+        var files = input.files
+        for (let i = 0; i < files.length; i++) {
+            imagesArray.push(files[i])
+        }
+        displayImages()
+    })
+
+    inputDiv.addEventListener("drop", () => {
+        e.preventDefault()
+        var files = e.dataTransfer.files
+        for (let i = 0; i < files.length; i++) {
+            if (!files[i].type.match("image")) continue;
+
+            if (imagesArray.every(image => image.name !== files[i].name))
+                imagesArray.push(files[i])
+        }
+        displayImages()
+    })
+    function displayImages() {
+        var images = ""
+        imagesArray.forEach((image, index) => {
+            images += `<div class="image">
+                                <img src="${URL.createObjectURL(image)}" alt="image"  style="max-width:200px;max-height:180px;min-width:150px;min-height:150px;">
+                            <span onclick="deleteImage(${index})">&times;</span>
+                          </div>`
+        })
+        output.innerHTML = images
+    }
+
+    function deleteImage(index) {
+        imagesArray.splice(index, 1)
+
+        displayImages()
+    }
+
+    function ajaximagefill() {
+
+        var missionImages = $('.fillImage');
+        for (var i = 0; i < missionImages.length; i++) {
+            ajaximagesArray.push($(missionImages[i]).val());
+        }
+        console.log(ajaximagesArray);
+    }
+    ajaximagefill()
+    displayajaxImages()
+
+    function displayajaxImages() {
+        var images = ""
+        ajaximagesArray.forEach((image, index) => {
+            images += `<div class="image">
+                                <img src="${image}" alt="image"  style="max-width:200px;max-height:180px;min-width:150px;min-height:150px;">
+                                <span onclick="deleteajaxImage(${index})">&times;</span>
+                          </div>`
+        })
+        output1.innerHTML = images
+        var imagestring = ajaximagesArray.join(',');
+        $('#preloadedImages').val(imagestring);
+        console.log(ajaximagesArray);
+    }
+
+    function deleteajaxImage(index) {
+
+        ajaximagesArray.splice(index, 1)
+
+        displayajaxImages()
+    }
+
+
+    function DateValidation() {
+        var min = $('#StartDate').val();
+        $('#EndDate').attr('min', min);
+        $('#Deadline').attr('max', min);
+    }
+    GetCities()
+     function GetCities() {
+
+        $.ajax({
+            type: 'Get',
+
+            url: '/Admin/GetCities',
+            data: {
+
+                Country_id: $('#country').val()
+            },
+            success:
+                function (res) {
+                    console.log(res);
+                    $("#citydrop").empty();
+                    for (var i = 0; i < res.length; i++) {
+                        console.log(res[i]);
+                        var select = $('#citydrop');
+
+                        // Create a new option element
+                        var option = $('<option>');
+
+                        // Set the text and value of the option element
+                        option.text(res[i].name);
+                        option.val(res[i].cityId);
+
+                        // Append the option element to the select element
+                        select.append(option);
+                    }
+                   
+                },
+            failure:
+                function () {
+
+                }
+        });
+    }
+
+
+
+</script>

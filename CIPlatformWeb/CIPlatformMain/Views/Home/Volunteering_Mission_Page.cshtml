@@ -1,0 +1,598 @@
+﻿@model CIPlatformMain.Entities.ViewModel.MissionDetails;
+<html>
+<head>
+
+    <link rel="styleheightt" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/Volunteering_Mission_Page.css" />
+</head>
+ @{
+                    var user = long.Parse(@Context.Session.GetString("UserID"));
+                }
+<body class="container-fluid w-75 mt-3">
+    @{
+        if (TempData["ApplicationStatus"] == "true")
+        {
+            <script>
+                alert('');
+            </script>
+        }
+        if (TempData["ApplicationStatus"] == "false")
+        {
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Write Something in Comment!',
+
+                })
+            </script>
+        }
+    }
+    <partial name="_navigation" />
+
+
+
+
+
+    @foreach (var mission in Model.Mission)
+
+    {
+        <input value="@mission.MissionId" type="hidden" id="mission_id" />
+
+
+        <div class="row  mt-5  info">
+
+
+
+            <div class="info-img col-sm-12 col-lg-6 p-0">
+                <div class="container p-0">
+
+                    <!-- Full-width images with number text -->
+                    @if (Model.MissionMedia.Count() == 0)
+                    {
+                        <div class="mySlides">
+
+                            <img src="~/images/No-Image-Placeholder.svg.png" style="width:100%; min-height:400px; min-width:600px;max-height:450px;">
+                        </div>
+                    }
+                    @{
+                        int slide = 0;
+                        foreach (var i in Model.MissionMedia)
+                        {
+                            if (i.MediaType == "IMG")
+                            {
+
+                                slide = slide + 1;
+                                <div class="mySlides">
+                                    <div class="numbertext">@slide / @Model.MissionMedia.Count()</div>
+                                    <img src="@i.MediaPath" style="width:100%; min-height:450px; max-height:460px;">
+                                </div>
+                            }
+                            if (i.MediaType == "URL")
+                            {
+                                slide = slide + 1;
+                                 <div class="mySlides">
+                                    <div class="numbertext">@slide /  @Model.MissionMedia.Count()</div>
+                                        <iframe  style="width:100%; min-height:450px"
+                                        src='@i.MediaPath.Replace("watch?v=", "embed/")'>
+                                        </iframe>
+                                </div>
+                            }
+
+                        }
+
+                    }
+
+
+
+                    <!-- Thumbnail images -->
+                <div class="row d-flex justify-content-center mt-2">
+
+                        @foreach (var i in Model.MissionMedia)
+                        {
+                            if (i.MediaType == "IMG")
+                            {
+                                <div class="column p-0 me-1">
+                                    <img class="demo cursor" src="@i.MediaPath" style="width:100%; height:55px;" onclick="currentSlide(1)" alt="The Woods">
+                                </div>
+                            }
+                            if(i.MediaType == "URL")
+                            {
+                                <div class="column p-0 me-1">
+                                    <iframe style="width:100%; height:55px;" onclick="currentSlide(1)"
+                                src='@i.MediaPath.Replace("watch?v=", "embed/")'>
+                                    </iframe>
+                                </div>
+                            }
+                            
+                        }
+
+
+                    </div>
+                    @if (Model.MissionMedia.Count() > 0)
+                    {
+                        <a class="prev " style="top:50%" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next " style="top:50%" onclick="plusSlides(1)">&#10095;</a>
+                    }
+                </div>
+            </div>
+
+
+            <div class="info-txt  col-lg-6 col-sm-12 ">
+                <h1 class="m-0" style="font-size:25px;">
+                    @mission.Title
+                </h1>
+                <p class="m-0">
+                    @mission.ShortDescription
+                </p>
+                <div class="date-hr">
+                    <hr>
+                    @if ("Time" == mission.MissionType)
+                    {
+                        <p class="mt-2 p-1">From&nbsp;<span>@Convert.ToDateTime(@mission.StartDate).ToString("dd/MM/yyyy")</span> &nbspTo&nbsp;<span>@Convert.ToDateTime(@mission.EndDate).ToString("dd/MM/yyyy")</span> </p>
+                    }
+                    else
+                    {
+                        if (@Model.GoalMissions != null)
+                        {
+                            <p class="mt-2 p-1">@Model.GoalMissions.GoalObjectiveText</p>
+                        }
+                    }
+                    <hr>
+                </div>
+                <div class="d-flex  ">
+                    <div style="margin:auto">
+                        <img src="~/images/Seats-left.png" />
+                        <span>@mission.SeatsLeft</span>
+                        <p class="m-0">Seats Left</p>
+                    </div>
+                    <div class="" style="margin:auto">
+
+                        @if (@mission.MissionType == "Time")
+                        {
+                            @if (mission.Deadline > DateTime.Now)
+                            {
+                                <img src="~/images/deadline.png" />
+                                <span>@Convert.ToDateTime(@mission.Deadline).ToString("dd/MM/yyyy")</span>
+                                <p class="m-0">Deadline</p>
+                            }
+                            else if (mission.StartDate < DateTime.Now && mission.EndDate> DateTime.Now)
+                            {
+                            
+                                 <div class=" p-1 px-2 rounded-pill" style="border-radius:0px 15px 15px 0px; font-size:1.27rem; background-color:#E86A33;">
+                                    On Going
+                                </div>
+                            }
+                            else
+                            {
+                                <div class=" p-1 px-2 rounded-pill" style="border-radius:0px 15px 15px 0px; font-size:1.27rem; background-color:#E86A33;">
+                                    DeadLine Passed
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            if (@Model.GoalMissions != null)
+                            {
+                                <div class="ms-3">
+                                    @{
+                                        var acchivedgoal = Model.Timesheets.Where(m => m.MissionId == mission.MissionId && m.Status == "APPROVED").Sum(t => t.Action);
+                                        @if (acchivedgoal < Model.GoalMissions.GoalValue)
+                                        {
+                                            <div class="ms-3">
+                                                @{
+                                                    int progressbar_value = (int)((double)acchivedgoal / Model.GoalMissions.GoalValue * 100);
+                                                }
+                                                <div class="progress">
+
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width:  @progressbar_value%"></div>
+                                                </div>
+
+                                                <p class="mb-4">@Model.GoalMissions.GoalObjectiveText</p>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="ms-3">
+
+
+                                                <p class="mb-4">Goal Achhived</p>
+                                            </div>
+                                        }
+                                    }
+
+                                </div>
+                            }
+                        }
+
+                    </div>
+                </div>
+
+
+                <hr />
+                <div class="fab-button">
+                    @if (Model.FavMission==null)
+                    {
+                        <button class="btn rounded-pill empty" value="1" onclick="addtofav(1,@mission.MissionId)"><img src="~/images/heart1.png" />&nbspAdd To Favourite</button>
+                    }
+                    else
+                    {
+                        <button class="btn rounded-pill filled" value="2" onclick="removefav(2,@mission.MissionId)"><img src="~/images/red-heart.jpeg" width="20px;" height="20px"/>&nbspFavourite</button>
+                    }
+                    @if (Model.Application.Where(a => a.MissionId == mission.MissionId && a.UserId == user).FirstOrDefault() != null && mission.SeatsLeft!=0)
+                    {
+                        <button class="btn rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" ><img src="~/images/add1.png" />&nbspRecommend to a Co-worker</button>
+
+                    }
+                    else
+                    {
+                        <button class="btn rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled><img src="~/images/add1.png" />&nbspRecommend to a Co-worker</button>
+                    }
+
+
+
+
+
+
+                    <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Recommend To Co-worker</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                @foreach (var i in Model.User.Where(u => u.UserId != long.Parse(@Context.Session.GetString("UserID"))))
+                                {
+                                    <div class="modal-body d-flex justify-content-between">
+                                        <p>@i.FirstName @i.LastName</p>
+
+                                        <button type="button" class="btn btn-primary  m-0 recommend" value="@i.UserId"><span class="btn-lable">Send</span></button>
+                                    </div>
+
+                                }
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="date-hr rating-div">
+                    <hr />
+
+                    @{
+                        var counts = 0;
+
+
+                        for (var i = 0; i < Model.UserRating; i++)
+                        {
+                            counts = counts + 1;
+                            <img src="~/images/selected-star.png" class="rating-star" id=@counts />
+                        }
+                        var countu = counts;
+                        for (var i = 0; i < (5 - Model.UserRating); i++)
+                        {
+                            countu = countu + 1;
+                            <img src="~/images/star.png" id=@countu class="rating-star" />
+
+                        }
+
+                    }
+
+                    <hr />
+                </div>
+                <div>
+                    <div class="abc">
+                        <div class="border bg-light collection p-2">
+                            <img src="~/images/pin1.png" class="mt-2" />
+                            <p class="mb-0 mt-4">City</p>
+                            <p>@mission.City.Name</p>
+                        </div>
+                        <div class="  border bg-light collection p-2">
+                            <img src="~/images/web.png" class="mt-2" />
+                            <p class="mb-0 mt-4">Theme</p>
+                            <p class="mb-0">@mission.Theme.Title</p>
+                        </div>
+                        <div class="  border bg-light collection p-2">
+                            <img src="~/images/calender.png" class="mt-2" />
+
+                            @if (mission.EndDate > DateTime.Now  )
+                            {
+                                <p class="mb-0 mt-4">Date</p>
+                                <p class="mb-0">Ongoing Opportunity</p>
+                            }
+                            else
+                            {
+                                <p class="mb-0 mt-4">Date</p>
+                                <p class="mb-0">Mission Completed</p>
+                            }
+
+                        </div>
+                        <div class=" border bg-light collection p-2">
+                            <img src="~/images/organization.png" class="mt-2" />
+                            <p class="mb-0 mt-4">Organization</p>
+                            <p class="mb-0 small">@mission.OrganizationName</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="MissionApplicationstaus">
+                    @if (Model.Application.Where(a => a.MissionId == mission.MissionId && a.ApprovalStatus == "APPROVED" && a.UserId == user).FirstOrDefault() != null)
+                    {
+                        <button type="button" disabled class="btn btn-lg btn-success rounded-pill apply-btn mt-2 mb-1 px-5">Applied</button>
+
+                    }
+                    else if (Model.Application.Where(a => a.MissionId == mission.MissionId && a.ApprovalStatus == "PENDING" && a.UserId == user).FirstOrDefault() != null)
+                    {
+
+                        <button type="button" disabled class="btn btn-lg btn-secondary rounded-pill apply-btn mt-2 mb-1 px-5">Pending</button>
+                    }
+                    else if (Model.Application.Where(a => a.MissionId == mission.MissionId && a.ApprovalStatus == "DECLINE" && a.UserId == user).FirstOrDefault() != null)
+                    {
+                        
+                         <button type="button" disabled class="btn btn-lg btn-danger rounded-pill apply-btn mt-2 mb-1 px-5">Decline</button>
+                    }
+                    else
+                    {
+                        @if (Model.Application.Where(a => a.MissionId == mission.MissionId && a.UserId == user).FirstOrDefault() != null || mission.Deadline < DateTime.Now || mission.SeatsLeft == 0)
+                        {
+                            <button type="button" disabled class="btn btn-lg btn-secondary rounded-pill apply-btn mt-2 mb-1 px-5">Mission Closed</button>
+                            
+                        }
+                        else
+                        {
+                            <button type="button" class="btn btn-outline-warning rounded-pill apply-btn mt-2 mb-1" value="@mission.MissionId">Apply <img class="ms-2" src="~/images/right-arrow.png" /></button>
+                        }
+                       
+                    }
+                </div>
+
+            </div>
+
+        </div>
+        <div class=" d-flex info-2 ">
+            <div class="mt-5 col-lg-7">
+                <ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active p-1" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Mission</button>
+                    </li>
+                    <li class="nav-item " role="presentation">
+                        <button class="nav-link p-1" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Organization</button>
+                    </li>
+                    <li class="nav-item " role="presentation">
+                        <button class="nav-link p-1" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Comments</button>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <h2>@mission.Title</h2>
+            <hr />
+            <h4>@mission.ShortDescription</h4>
+            <p> @Html.Raw(@mission.Description)</p>
+                        <h3>Documents</h3>
+                        @foreach (var i in Model.MissionDocuments)
+                        {
+                           
+                                <a href="@i.DocumentPath" target="_blank"><img src="~/images/doc.png" />@i.DocumentName</a>
+                            
+                        }
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                       
+                           <h2>@mission.OrganizationName</h2>
+            <hr />
+           
+            <p> @Html.Raw(mission.OrganizationDetail)</p>
+                        
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                        <div class="">
+                            <label for="exampleFormControlTextarea1" class="form-label">Enter Your Comments</label>
+                            <textarea class="form-control comment-text-box" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-outline-warning rounded-pill" onclick="postcomment()">Post Comment</button>
+                        </div>
+                        <div class="" style="overflow-x: hidden; overflow-y:auto; max-height:500px;">
+                            <div class="comment-box">
+
+                                @foreach (var i in Model.MissionComments)
+                                {
+                                    <div class="  mt-4" style="display:flex;flex-direction:row; background-color:#fff ">
+                                        <div>
+                                            <img class="rounded-circle comment-img" src="@i.User.Avatar" />
+                                        </div>
+                                        <div class="ms-3">
+                                            <p class="m-0">@i.User.FirstName</p>
+                                            <span class="m-0">@i.CreatedAt</span>
+                                            <p class="mb-0 mt-3">@i.CommentText</p>
+                                        </div>
+
+                                    </div>
+                                }
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 mt-2">
+                <div class="info-box p-1">
+                    <h2>Information</h2>
+                    <hr />
+                    <div class="d-flex justify-content-between ">
+                        <p class="w-20">Skills</p>
+                        <p class="w-75">
+                            @foreach (var i in Model.MissionSkills)
+                            {
+                                <span>@i.Skill.SkillName</span>
+                            }
+                        </p>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between  ">
+                        <p class="w-20">Days</p>
+                        <p class=" w-75">@mission.Availability</p>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between  ">
+                        <p class="w-20">Rating</p>
+                        <div class="w-75 user_rating">
+
+                            @for( var i = 1; i <=Model.Rating; i++)
+                            {
+                                <img src="~/images/selected-star.png" />
+                            }
+
+                            @for (var i =Model.Rating; i < 5; i++)
+                            {
+                                <img src="~/images/star.png" />
+                            }
+
+
+
+
+                            <span>(By <span>@Model.TotalRating</span> Volunteer)</span>
+                        </div>
+                    </div>
+                    <hr />
+
+                </div>
+                <div class="mt-3 info-box p-3 ">
+                    <h2 class="">Recent Volunteer</h2>
+                    <hr />
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-interval="">
+                        <div class="carousel-inner">
+                            <div class="carousel-item recentvol-div active overflow-scroll " style="max-height:300px;">
+
+                                <div class="row" style="text-align:center">
+                                    @foreach (var u in Model.Application)
+                                    {
+                                        if (u.MissionId == mission.MissionId)
+                                        {
+                                            <div class="col-4 mb-3 mt-1">
+                                                <img src="@u.User.Avatar" class="recent-img rounded-circle " />
+                                                <p>@u.User.FirstName</p>
+                                            </div>
+                                        }
+
+                                    }
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <hr />
+
+
+                </div>
+            </div>
+        </div>
+    }
+    <hr />
+
+    <div class="d-flex mb-3">
+        <h2 style="margin:auto">Releted Missions</h2>
+    </div>
+
+    <div class="card-cont" id="card-cont">
+        @foreach (var i in Model.RelatedMission.Where(r=>r.MissionId!=Model.Mission.FirstOrDefault().MissionId))
+        {
+
+
+            <div class="card">
+                <div class="mission-img">
+                    <div class="rounded-pill p-1" id="location" style="position:absolute;right:8px; top:5% ">
+                        <img src="/images/pin.png" />&nbsp;<span>Canada</span>
+                    </div>
+                    <div class="rounded-circle p-2" id="location" style="position:absolute;right:8px; top:35%">
+                        <img src="/images/heart.png" />
+                    </div>
+                    <div class="rounded-circle p-2" id="location" style="position:absolute;right:8px; top:55%">
+                        <img src="/images/add1.png" />
+                    </div>
+                    <img src="@i.MissionImg" class=" card-img-top" style="max-height:220px;" alt="..." />
+
+                    <div id="mission-theme" class="rounded-pill text-center">
+                        <p class="mt-1 mb-1 ps-2 pe-2">@i.Theme.Title</p>
+                    </div>
+                </div>
+
+                <div class="card-body p-1 ms-2">
+                    <h5 class="card-title">@i.Title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-flex justify-content-between">
+                        <div> @i.OrganizationName</div>
+                        <div class="star-rating">
+                            <input type="radio" id="5-stars" name="rating" value="5" />
+                            <label for="5-stars" class="star">&#9733;</label>
+                            <input type="radio" id="4-stars" name="rating" value="4" />
+                            <label for="4-stars" class="star">&#9733;</label>
+                            <input type="radio" id="3-stars" name="rating" value="3" />
+                            <label for="3-stars" class="star">&#9733;</label>
+                            <input type="radio" id="2-stars" name="rating" value="2" />
+                            <label for="2-stars" class="star">&#9733;</label>
+                            <input type="radio" id="1-star" name="rating" value="1" />
+                            <label for="1-star" class="star">&#9733;</label>
+                        </div>
+                    </div>
+                    <div class="date-hr">
+                        <hr>
+                        <p class="mt-2 p-1">From 10/01/2021 to 10/02/2021</p>
+                        <hr>
+                    </div>
+
+
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <img src="~/images/Seats-left.png" />
+                            <span>@i.SeatsLeft</span>
+                            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Seats left</p>
+
+                        </div>
+                        <div>
+                            <img src="~/images/deadline.png" />
+                            <span>@Convert.ToDateTime(@i.StartDate).ToString("dd/MM/yyyy")</span>
+                            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deadline</p>
+
+                        </div>
+
+                    </div>
+                    <hr class="m-0" />
+                   <a asp-controller="Home" asp-action="Volunteering_Mission_Page" asp-route-missionid="@i.MissionId"> <button type="button" class="btn btn-outline-warning rounded-pill apply-btn mt-2 mb-1">Apply <img class="ms-2" src="~/images/right-arrow.png" /></button></a>
+
+
+                </div>
+            </div>
+        }
+    </div>
+
+    <div style="
+  bottom: 10px;">
+          <hr />
+          <div class="container-fluid " >
+           
+                    <a class="nav-link fs-5" asp-controller="Home" asp-action="PrivacyPolicy" style="text-decoration:none">Privacy Policy</a>
+
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/Volunteerin_MissionPage.js"></script>
+</body>
+</html>
+
+
+
+

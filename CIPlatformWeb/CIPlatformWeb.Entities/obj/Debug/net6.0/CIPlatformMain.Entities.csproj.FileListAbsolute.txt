@@ -1,0 +1,196 @@
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\refint\CIPlatformMain.Entities.dll
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Users\dell\Desktop\Tatva-CIPlatform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+D:\Projects\CIPLatform-NTier\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\refint\CIPlatformMain.Entities.dll
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\CI-Project\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+D:\Projects\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\refint\CIPlatformMain.Entities.dll
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Community Investment Plaform\Community-Investment-Platform-master\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+D:\Projects\Community Investment Platform\CommunityInvestmentPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\refint\CIPlatformMain.Entities.dll
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Community Investment Platform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+E:\Projects\CIPlatform\CIPLATFORM-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\refint\CIPlatformMain.Entities.dll
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Projects\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+E:\Projects\CI-PLATFORM-3.0\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+E:\Projects\CI-PLATFORM\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\refint\CIPlatformMain.Entities.dll
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Projects\Comunity Investment Platform\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.deps.json
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.runtimeconfig.json
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\bin\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.AssemblyReference.cache
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfoInputs.cache
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.AssemblyInfo.cs
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.csproj.CoreCompileInputs.cache
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.dll
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\refint\CIPlatformMain.Entities.dll
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.pdb
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\CIPlatformMain.Entities.genruntimeconfig.cache
+C:\Projects\CIPLATFORM\CI-PLATFORM-3.0-master\CIPlatformWeb\CIPlatformWeb.Entities\obj\Debug\net6.0\ref\CIPlatformMain.Entities.dll

@@ -1,0 +1,203 @@
+﻿@using CIPlatformMain.Entities.Models
+@model CIPlatformMain.Entities.Models.User
+<style>
+.form-control.is-valid, .was-validated .form-control:valid {
+background-image:none!important;
+}
+input{
+    border:1px solid black;
+}
+
+</style>
+
+<div id="AddUser">
+   
+
+
+     <h2 class="mt-3">User</h2>
+                <hr />
+    <button class="btn btn-outline-warning " onclick="GetUserData()">Back To List</button>
+   
+    <form class="was-validated" method="post" asp-controller="Admin" asp-action="AddUserData" enctype="multipart/form-data" >
+
+        <div class="row mt-4">
+            <h3>Basic Information</h3>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Name:</label>
+                        <input type="text" asp-for="FirstName"  class="form-control"  placeholder="Enter Firstname"  style="border:1px solid black;background-image:none;"  required>
+                       
+                         <div class="invalid-feedback">Please Enter First Name</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Surname: </label>
+                        <input type="text" asp-for="LastName" class="form-control" style="border:1px solid black;background-image:none;" >
+                        <span asp-validation-for="LastName"></span>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Add UserAvatar</label>
+                       <input type="file" asp-for="Avatar" name="Avatar" style="border:1px solid black;background-image:none;" />
+                    </div>
+                </div>
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Phone Number</label>
+                        <input type="number" asp-for="PhoneNumber" class="form-control" style="border:1px solid black;background-image:none;"  required>
+                        <span asp-validation-for="PhoneNumber"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">EmailId:</label>
+                        <input type="email" asp-for="Email" style="border:1px solid black;background-image:none;"  class="form-control">
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Paasowrd: </label>
+                        <input type="password" asp-for="Password" style="border:1px solid black;background-image:none;"  class="form-control">
+                        <span asp-validation-for="Password"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">EmployeeId:</label>
+                        <input type="text" asp-for="EmployeeId" style="border:1px solid black;background-image:none;"  class="form-control">
+                        <span asp-validation-for="EmployeeId"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Manager: </label>
+                        <input type="text" asp-for="Manager" style="border:1px solid black;background-image:none;"  class="form-control" value="">
+                        <span asp-validation-for="Manager"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Title:</label>
+                        <input type="text" asp-for="Title" class="form-control">
+                        <span asp-validation-for="Title"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Department: </label>
+                        <input type="text" asp-for="Department" class="form-control">
+                        <span asp-validation-for="Department"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">My Profile:</label>
+                        <textarea asp-for="ProfileText" class="form-control" rows="4" value=""></textarea>
+                        <span asp-validation-for="ProfileText"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Why Volunteer ?</label>
+                        <textarea asp-for="WhyIVolunteer" class="form-control" rows="4" value=""></textarea>
+                        <span asp-validation-for="WhyIVolunteer"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">LinkedInUrl:</label>
+                        <input type="text" asp-for="LinkedInUrl" class="form-control">
+                        <span asp-validation-for="LinkedInUrl"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="profile_details_text">Avability</label>
+                        <select class="form-select" asp-for="Avability" id="Avability" aria-label="Default select example">
+
+
+                            
+                                <option value="Daily">Daily</option>
+                            <option value="Weakly">Weakly</option>
+                            <option value="Weekends">Weekends</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h3>Address Information</h3>
+            <hr />
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select class="form-select" asp-for="CountryId" id="country" aria-label="Default select example">
+
+
+                            @foreach (var item in ViewData["countries"] as IList<Country>)
+                            {
+                                <option value="@item.CountryId">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                    <div class="form-group">
+                        <label>City</label>
+                        <select class="form-select city-drop" asp-for="CityId" aria-label="Default select example">
+                            @foreach (var item in ViewData["cities"] as IList<City>)
+                            {
+                                <option value="@item.CityId">@item.Name</option>
+                            }
+
+                        </select>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-outline-warning  rounded-pill">Save</button>
+
+    </form>
+</div>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>

@@ -1,0 +1,35 @@
+#reset-btn {
+    width: 80%;
+    height: 48px;
+    margin-left: 10%;
+    background: #F8863400 0% 0% no-repeat padding-box;
+    border: 2px solid #F88634;
+    border-radius: 24px;
+    opacity: 1;
+}
+
+#pr {
+    position: relative;
+    top: 40px;
+}
+
+#main-cont {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #414141;
+    opacity: 1;
+}
+
+#disc {
+    text-align: center;
+    letter-spacing: 0px;
+    color: #414141;
+    opacity: 1;
+}

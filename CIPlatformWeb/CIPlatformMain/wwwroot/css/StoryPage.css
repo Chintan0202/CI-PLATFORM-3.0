@@ -1,0 +1,46 @@
+﻿.header-img {
+    width: 100%;
+    
+    height: 300px !important;
+    margin: auto;
+    filter: brightness(35%);
+    object-fit:cover;
+    object-position:50% 30%;
+}
+.header-txt {
+    position: absolute;
+    color: aliceblue;
+   top:30%;
+   left:20%;
+   right:20%;
+}
+
+.cards-cont {
+    margin:30px 60px 0px 60px;
+
+    position: relative;
+    gap: 20px;
+    flex-wrap:wrap;
+    
+}
+#mission-theme {
+    position: relative;
+    background-color: #ffffff;
+    bottom: 20px;
+    margin: 0px 60px 0px 60px;
+}
+
+.mission-img:hover{
+    filter:brightness(50%);
+}
+.mission-img button{
+    position:absolute;
+    top:29%;
+    left:32%;
+    
+}
+
+.mission-img button:hover{
+    color:black;
+    background-color:black;
+}

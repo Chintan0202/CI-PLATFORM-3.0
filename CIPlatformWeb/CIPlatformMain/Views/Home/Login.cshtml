@@ -1,0 +1,148 @@
+﻿@using CIPlatformMain.Entities.Models
+@model CIPlatformMain.Entities.Models.User;
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <liaautop.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css" />
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body >
+    @{
+        @if (ViewBag.Logincredentials == 1)
+        {
+            <script>
+                            Swal.fire({
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'User Not Available!',
+                  footer: "User Has Been Deleted By Admin"
+                })
+            </script>
+        }
+    }
+    <div class="row BannerImage" >
+        <div class="col-lg-8 " >
+            <div id="carouselExampleSlidesOnly"
+                  class="carousel " data-ride="carousel">
+
+                <div class="carousel-inner BannerImage">
+
+                   
+                        @foreach (var item in ViewData["Banners"] as IList<Banner>)
+                        {
+                            if (@item.SortOrder == 1)
+                            {
+                                <div class="carousel-item active BannerImage">
+                                    <img src="@item.Image"
+                             class="d-block w-100 " style="height:100%"
+                             alt="..." />
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h3 class="text-start">@item.Text</h3>
+                                        <p class="text-start">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut al
+                                            iquip ex ea commodo consequat. p>
+                                    </div>
+                                </div>
+
+                            }
+                            else
+                            {
+                                <div class="carousel-item BannerImage">
+                                    <img src="@item.Image"
+                             class="d-block w-100 "style="height:100%"
+                             alt="..." />
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h3 class="text-start">@item.Text</h3>
+                                        <p class="text-start">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut al
+                                            iquip ex ea commodo consequat. p>
+                                    </div>
+                                </div>
+                            }
+
+                        }
+                    
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-4 d-flex flex-column justify-content-center">
+            @if (ViewBag.resetstatus == 1)
+            {
+                <div class="text text-success">Your Password has been changed</div>
+            }
+            <form asp-action="Login">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label mt-5">Email address</label>
+
+                    <input type="email" asp-for="Email" class="form-control" placeholder="Email">
+
+                    <span asp-validation-for="Email" class="text-danger"></span>
+
+                </div>
+
+                <div class="input-group-lg mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+
+                    <input type="password" asp-for="Password" class="form-control" placeholder="password">
+
+                    <span asp-validation-for="Password" class="text-danger"></span>
+
+                </div>
+
+                <input value="Login" type="submit" class="btn" id="login-btn" />
+
+
+
+                @if (ViewBag.Logincredentials == 0)
+                {
+                    <div class="alert alert-danger mt-2">Invalid credentials Please enter valid email and password</div>
+                }
+            </form>
+
+            <div class="alert text-center mb-0" role="alert">
+                <a class="" asp-controller="Home" asp-action="Forgotpassword" style="text-decoration:none;color:#414141">Lost Your Password</a>
+            </div>
+            <div class="alert  text-center pt-0 mb-0" role="alert">
+                Don’t have an account?
+                <a asp-controller="Home" asp-action="Registration" class="alert-link" style="text-decoration:none">Create an account</a>
+            </div>
+
+            <div class="text-center mt-5"><a class=" border rounded-pill p-2" asp-controller="Admin" asp-action="AdminLogin" style="text-decoration:none;background-color:#ffa207;color:black">Login As Admin</a></div>
+
+            <div class="text-center">
+                <a asp-controller="Home" asp-action="PrivacyPolicy" id="pr" style="margin:auto;text-decoration:none">Privacy Policy</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

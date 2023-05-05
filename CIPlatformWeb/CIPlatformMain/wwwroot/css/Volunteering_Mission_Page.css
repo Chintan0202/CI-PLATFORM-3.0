@@ -1,0 +1,300 @@
+﻿body{
+    overflow-x:hidden!important;
+}
+.card-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    width: 30%;
+    height: fit-content;
+}
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2em;
+    justify-content: space-between;
+    padding: 0 .2em;
+    text-align: center;
+    width: 5em;
+}
+
+
+    .star-rating input {
+        display: none;
+    }
+
+    .star-rating label {
+        color: #ccc;
+        cursor: pointer;
+    }
+
+    .star-rating :checked ~ label {
+        color: #fc0;
+    }
+
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+        color: #fc0;
+    }
+.mission-img {
+    position: relative;
+}
+#mission-theme {
+    position: relative;
+    background-color: #ffffff;
+    bottom: 20px;
+    margin: 0px 60px 0px 60px;
+}
+#location {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+}
+.cards {
+    display: flex;
+    flex-direction: row;
+    width: 90%
+}
+
+.date-hr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .date-hr p {
+        border-radius: 14px;
+        border: 0px;
+        background-color: #cccccc;
+    }
+
+hr {
+    flex: 1;
+    border: none;
+    height: 2px;
+    background: black;
+}
+.apply-btn {
+    position: relative;
+    left: 35%;
+}
+.recentvol-div{
+    overflow-x:hidden;
+}
+@media screen and (max-width:850px) {
+    .card-cont {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 32rem;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttons {
+        display: none;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .card-cont {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+    .abc {
+        flex-wrap:wrap;
+       
+        margin:auto;
+    }
+
+    .collection {
+        width: 40%!important;
+    }
+    .fab-button button{
+        margin-top:5px!important;
+    }
+   
+}
+/** {
+    box-sizing: border-box;
+}*/
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 2px 2px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev{
+    left:0;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        /*background-color: rgba(0, 0, 0, 0.8);*/
+    }
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+
+
+.fab-button {
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+    .fab-button button {
+        border: 1px solid #000000;
+        margin: auto
+    }
+.abc{
+    width:100%;
+    display:flex;
+   gap:5px;
+}
+.collection{
+    width:25%;
+}
+@media screen and (max-width:990px){
+    .info{
+        display:flex;
+        flex-direction:column;
+    }
+    .info-txt{
+        margin-top:20px;
+    }
+    .mySlides img {
+        min-height: 300px;
+    }
+    .info-2{
+        display:flex;
+        flex-direction:column;
+    }
+}
+.comment-img {
+    width: 60px;
+    height: 60px;
+}
+.info-box {
+    border: 1px solid #818181;
+}
+.recent-img{
+    width:60px;
+    height:60px;
+    
+}
+.nav-link.active{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:3px solid black !important;
+    
+}
+.nav-link{
+    color:black;
+}
+    .nav-link:hover{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        
+        color:black;
+    }

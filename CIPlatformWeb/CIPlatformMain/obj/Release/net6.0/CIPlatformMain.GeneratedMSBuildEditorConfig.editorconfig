@@ -1,0 +1,172 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CIPlatformMain
+build_property.RootNamespace = CIPlatformMain
+build_property.ProjectDir = E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformMain\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Projects\Comunity Investment Platform\CIPlatformWeb\CIPlatformMain
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Admin/AddUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Admin/AdminLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Admin/AdminPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Home/Forgotpassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3Jnb3RwYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Home/LandingPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMYW5kaW5nUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Home/PrivacyPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5UG9saWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Home/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Home/Resetpassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXNldHBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Home/Volunteering_Mission_Page.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWb2x1bnRlZXJpbmdfTWlzc2lvbl9QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_AddEditCMSPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZGRFZGl0Q01TUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_AddEditMission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZGRFZGl0TWlzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_AddEditUserPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZGRFZGl0VXNlclBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_BannerManagment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYW5uZXJNYW5hZ21lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_CMSPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DTVNQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_Filterbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GaWx0ZXJiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_MissionApplicationList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uQXBwbGljYXRpb25MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_MissionList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_MissionSkills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uU2tpbGxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_MissionTheme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uVGhlbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_navigation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9uYXZpZ2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_StoryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdG9yeUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_User.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_viewStory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF92aWV3U3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Story/AddEditStory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcnlcQWRkRWRpdFN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Story/ShareYourStory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcnlcU2hhcmVZb3VyU3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Story/StoryDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcnlcU3RvcnlEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Story/StoryListPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcnlcU3RvcnlMaXN0UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/User/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/User/volunteeringTimesheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclx2b2x1bnRlZXJpbmdUaW1lc2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Comunity Investment Platform/CIPlatformWeb/CIPlatformMain/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-3c4tk0sruw
